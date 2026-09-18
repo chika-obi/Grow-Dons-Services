@@ -1,6 +1,6 @@
 {
-  "name": "Grow Dons Services",
-  "description": "Professional corporate website for Grow Dons Services—a premier indigenous Nigerian oil & gas chemical and engineering services company, highlighting their services, products, core values, HSE policies, and contact channels.",
+  "name": "Grow Dons Services Ltd",
+  "description": "Grow Dons Services Ltd specializes in oilfield chemicals, drilling fluid solutions, and technical industrial supply, supported by strategic procurement and dependable logistics.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

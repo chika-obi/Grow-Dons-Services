@@ -6,12 +6,41 @@
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
   
-  /* Brand color extensions for easy custom tailwind classes */
-  --color-brand-blue-dark: #0a1128;
-  --color-brand-blue: #003049;
-  --color-brand-blue-light: #0081a7;
-  --color-brand-orange: #f77f00;
-  --color-brand-orange-light: #fcbf49;
+  /* Grow Dons Brand Color System */
+  --color-brand-navy: #071A2B;
+  --color-brand-teal: #0B6670;
+  --color-brand-teal-light: #12828e;
+  --color-brand-orange: #F28C28;
+  --color-brand-orange-hover: #e07b16;
+  --color-brand-bg-light: #F5F7F6;
+  --color-brand-charcoal: #17232D;
+  --color-brand-dark-text: #17232D;
+  
+  /* Legacy compatibility aliases mapped to new system */
+  --color-brand-blue-dark: #071A2B;
+  --color-brand-blue: #071A2B;
+  --color-brand-blue-light: #0B6670;
+  --color-brand-orange-light: #f7a048;
+}
+
+/* Technical Engineering Grid Backgrounds */
+.bg-tech-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(11, 102, 112, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 102, 112, 0.08) 1px, transparent 1px);
+}
+
+.bg-tech-grid-dark {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.bg-dot-matrix {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(11, 102, 112, 0.2) 1px, transparent 1px);
 }
 
 /* Custom styles for smooth scrolling and scrollbars */

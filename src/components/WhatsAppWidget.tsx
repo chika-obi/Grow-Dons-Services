@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { MessageSquare, X, Send, MessageCircle } from "lucide-react";
+import { MessageSquare, X, Send } from "lucide-react";
 
-// Premium WhatsApp Brand SVG Path
+// WhatsApp Brand SVG Icon
 const WhatsAppIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
     <path d="M12.012 2c-5.506 0-9.988 4.476-9.988 9.988 0 1.761.459 3.479 1.332 5.006L2 22l5.132-1.313a9.907 9.395 0 0 0 4.88 1.301c5.506 0 10-4.476 10-9.988s-4.494-10-10-10zm.012 18.28c-1.579 0-3.131-.418-4.502-1.206l-.323-.191-3.34.856.885-3.155-.213-.33c-.859-1.348-1.311-2.924-1.311-4.544 0-4.551 3.738-8.287 8.304-8.287s8.304 3.736 8.304 8.287-3.738 8.287-8.304 8.287zm4.567-6.223c-.25-.124-1.474-.711-1.701-.791-.227-.08-.393-.12-.559.125-.164.246-.641.791-.786.953-.141.162-.284.183-.532.06a6.726 6.726 0 0 1-1.979-1.191c-.77-.668-1.289-1.488-1.442-1.741-.152-.254-.016-.391.109-.515.112-.112.251-.284.375-.426.124-.141.165-.241.25-.403.081-.162.041-.305-.021-.428-.06-.123-.559-1.311-.767-1.802-.2-.482-.403-.418-.559-.426-.145-.008-.31-.008-.475-.008-.166 0-.435.061-.664.305-.227.246-.869.831-.869 2.029 0 1.196.892 2.348.991 2.472.1.124 1.75 2.613 4.244 3.661.593.25 1.055.4 1.417.514.597.185 1.141.157 1.571.094.479-.071 1.474-.593 1.681-1.166.206-.576.206-1.07.145-1.166-.062-.101-.206-.162-.456-.285z" />
@@ -13,7 +13,7 @@ export const WhatsAppWidget: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hasPrompted, setHasPrompted] = useState(false);
 
-  // Trigger sub-prompt automatic slide-in notification bubble after 5 seconds to invite action
+  // Trigger prompt bubble after 5 seconds to invite action
   useEffect(() => {
     const timer = setTimeout(() => {
       if (!isOpen) {
@@ -23,8 +23,8 @@ export const WhatsAppWidget: React.FC = () => {
     return () => clearTimeout(timer);
   }, [isOpen]);
 
-  const primaryPhone = "2348034638006"; // Grow Dons Primary Support Line
-  const defaultMsg = "Hello Grow Dons Services, I would like to request an oilfield chemical solution quote.";
+  const primaryPhone = "2348034638006"; // Grow Dons Services Official Hotline
+  const defaultMsg = "Hello Grow Dons Services, I would like to inquire about your oilfield chemicals and technical supply.";
 
   const handleMessageClick = (customText?: string) => {
     const encodedText = encodeURIComponent(customText || defaultMsg);
@@ -42,19 +42,20 @@ export const WhatsAppWidget: React.FC = () => {
             initial={{ opacity: 0, y: 12, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
-            className="mb-3.5 bg-white border border-slate-200 text-slate-800 rounded-xl p-3.5 shadow-2xl max-w-[260px] text-xs relative flex items-start gap-2 cursor-pointer hover:border-emerald-500/40 transition-colors"
+            className="mb-3.5 bg-white border border-slate-200 text-slate-800 rounded-xl p-3.5 shadow-2xl max-w-[270px] text-xs relative flex items-start gap-2 cursor-pointer hover:border-emerald-500/40 transition-colors"
             onClick={() => {
               setIsOpen(true);
               setHasPrompted(false);
             }}
           >
-            {/* Small red close tag */}
+            {/* Close tip */}
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 setHasPrompted(false);
               }}
-              className="absolute -top-1.5 -right-1.5 h-5 w-5 bg-slate-900 border border-slate-800 text-white rounded-full flex items-center justify-center hover:bg-slate-850 cursor-pointer"
+              className="absolute -top-1.5 -right-1.5 h-5 w-5 bg-slate-900 border border-slate-800 text-white rounded-full flex items-center justify-center hover:bg-slate-800 cursor-pointer"
+              aria-label="Close notification"
             >
               <X className="h-2.5 w-2.5" />
             </button>
@@ -64,11 +65,11 @@ export const WhatsAppWidget: React.FC = () => {
             </div>
             <div>
               <p className="font-bold text-slate-900 flex items-center gap-1">
-                <span>Engr. Obi is Available</span>
+                <span>Commercial Desk Online</span>
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
               </p>
-              <p className="text-slate-500 mt-1 leading-relaxed">
-                Need urgent fluid parameter quotes? Ask on WhatsApp!
+              <p className="text-slate-500 mt-1 leading-relaxed text-[11px]">
+                Need immediate chemical specs or pricing? Reach our Port Harcourt desk on WhatsApp.
               </p>
             </div>
           </motion.div>
@@ -83,72 +84,73 @@ export const WhatsAppWidget: React.FC = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.95 }}
             transition={{ duration: 0.22 }}
-            className="bg-[#0c142c] text-white border border-slate-800/80 rounded-2xl shadow-2xl w-80 overflow-hidden mb-4"
+            className="bg-[#091C2E] text-white border border-slate-700/80 rounded-2xl shadow-2xl w-80 overflow-hidden mb-4"
           >
             {/* Chat header */}
             <div className="bg-emerald-600 p-4 flex justify-between items-center relative">
               <div className="flex items-center gap-3">
-                <div className="relative h-10 w-10 rounded-full bg-slate-900/40 border border-white/20 overflow-hidden flex items-center justify-center font-display font-black tracking-tight text-white select-none">
-                  PHC
-                  <span className="absolute bottom-0 right-0 h-2.5 w-2.5 bg-emerald-450 border-2 border-emerald-600 rounded-full animate-pulse" />
+                <div className="relative h-10 w-10 rounded-full bg-slate-900/40 border border-white/20 overflow-hidden flex items-center justify-center font-display font-black tracking-tight text-white select-none text-xs">
+                  GDS
+                  <span className="absolute bottom-0 right-0 h-2.5 w-2.5 bg-emerald-400 border-2 border-emerald-600 rounded-full animate-pulse" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold tracking-wide">Grow Dons Helpdesk</h4>
+                  <h4 className="text-sm font-bold tracking-wide">Grow Dons Commercial Desk</h4>
                   <p className="text-[10px] text-emerald-100 flex items-center gap-1 mt-0.5 font-mono">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-110 bg-white inline-block animate-ping" />
-                    <span>Typically replies instantly</span>
+                    <span className="h-1.5 w-1.5 rounded-full bg-white inline-block animate-ping" />
+                    <span>Port Harcourt Operational Hub</span>
                   </p>
                 </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
                 className="p-1 rounded-full hover:bg-black/10 text-white/80 hover:text-white transition-colors cursor-pointer"
+                aria-label="Close chat"
               >
                 <X className="h-4.5 w-4.5" />
               </button>
             </div>
 
             {/* Chat body containing sample queries */}
-            <div className="p-4 bg-slate-950/95 space-y-3.5">
-              <p className="text-[11px] text-slate-400 font-sans leading-relaxed">
-                Welcome to Grow Dons Services Limited. Choose a quick operational parameter below to launch a direct technical inquiry:
+            <div className="p-4 bg-[#051320] space-y-3.5">
+              <p className="text-[11px] text-slate-300 font-sans leading-relaxed">
+                Welcome to Grow Dons Services Ltd. Select an inquiry category below or start a live inquiry:
               </p>
 
               {/* Quick Preset Buttons */}
-              <div className="space-y-2">
+              <div className="space-y-2 font-mono text-xs">
                 <button
-                  onClick={() => handleMessageClick("Hello Grow Dons, I would like to request an instant quote for Downhole Chemicals & mud formulation compounds.")}
-                  className="w-full text-left bg-slate-900 hover:bg-slate-850 hover:border-emerald-500/30 border border-slate-800/80 p-2.5 rounded-lg text-xs leading-relaxed transition-all cursor-pointer flex justify-between items-center group"
+                  onClick={() => handleMessageClick("Hello Grow Dons Commercial Desk, I would like to request a quotation for Oilfield Chemicals (Drilling, Completion, or Production).")}
+                  className="w-full text-left bg-[#091C2E] hover:bg-[#0e273e] hover:border-emerald-500/40 border border-slate-800 p-2.5 rounded-lg leading-relaxed transition-all cursor-pointer flex justify-between items-center group"
                 >
-                  <span className="text-slate-200 group-hover:text-emerald-400 transition-colors">Inquire about Chemicals</span>
-                  <Send className="h-3 w-3 text-slate-500 group-hover:text-emerald-500 group-hover:translate-x-0.5 transition-all" />
+                  <span className="text-slate-200 group-hover:text-emerald-300 transition-colors">Oilfield Chemicals Quotation</span>
+                  <Send className="h-3 w-3 text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition-all" />
                 </button>
 
                 <button
-                  onClick={() => handleMessageClick("Hello Grow Dons, I am reaching out to inquire about Solids Control Loop rental equipment and mud logging services.")}
-                  className="w-full text-left bg-slate-900 hover:bg-slate-850 hover:border-emerald-500/30 border border-slate-800/80 p-2.5 rounded-lg text-xs leading-relaxed transition-all cursor-pointer flex justify-between items-center group"
+                  onClick={() => handleMessageClick("Hello Grow Dons, I would like to inquire about Technical Industrial Procurement (valves, piping, filtration, or instrumentation).")}
+                  className="w-full text-left bg-[#091C2E] hover:bg-[#0e273e] hover:border-emerald-500/40 border border-slate-800 p-2.5 rounded-lg leading-relaxed transition-all cursor-pointer flex justify-between items-center group"
                 >
-                  <span className="text-slate-200 group-hover:text-emerald-400 transition-colors">Mud Logging &amp; Filtration</span>
-                  <Send className="h-3 w-3 text-slate-500 group-hover:text-emerald-500 group-hover:translate-x-0.5 transition-all" />
+                  <span className="text-slate-200 group-hover:text-emerald-300 transition-colors">Industrial Procurement Sourcing</span>
+                  <Send className="h-3 w-3 text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition-all" />
                 </button>
 
                 <button
-                  onClick={() => handleMessageClick("Hi Support, I would like to receive details on hiring Offshore Cargo Carrying Units (CCU) and transport leases.")}
-                  className="w-full text-left bg-slate-900 hover:bg-slate-850 hover:border-emerald-500/30 border border-slate-800/80 p-2.5 rounded-lg text-xs leading-relaxed transition-all cursor-pointer flex justify-between items-center group"
+                  onClick={() => handleMessageClick("Hello Grow Dons, I would like to inquire about Material Logistics & Shorebase Delivery Coordination in Port Harcourt / Onne.")}
+                  className="w-full text-left bg-[#091C2E] hover:bg-[#0e273e] hover:border-emerald-500/40 border border-slate-800 p-2.5 rounded-lg leading-relaxed transition-all cursor-pointer flex justify-between items-center group"
                 >
-                  <span className="text-slate-200 group-hover:text-emerald-400 transition-colors">Offshore Rentals &amp; Lease</span>
-                  <Send className="h-3 w-3 text-slate-500 group-hover:text-emerald-500 group-hover:translate-x-0.5 transition-all" />
+                  <span className="text-slate-200 group-hover:text-emerald-300 transition-colors">Material Logistics &amp; Staging</span>
+                  <Send className="h-3 w-3 text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition-all" />
                 </button>
               </div>
 
               {/* Direct manual message option */}
-              <div className="pt-2 border-t border-slate-900">
+              <div className="pt-2 border-t border-slate-800">
                 <button
                   onClick={() => handleMessageClick()}
-                  className="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-2 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-md shadow-emerald-950/10"
+                  className="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 px-3 rounded-lg text-xs font-mono font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
                 >
                   <WhatsAppIcon className="h-4.5 w-4.5" />
-                  <span>Start Live Chat Now</span>
+                  <span>Start Live WhatsApp Chat</span>
                 </button>
               </div>
             </div>
@@ -165,10 +167,10 @@ export const WhatsAppWidget: React.FC = () => {
         className={`h-14 w-14 rounded-full flex items-center justify-center cursor-pointer shadow-2xl transition-all duration-300 ${
           isOpen
             ? "bg-slate-900 text-white border border-slate-800 rotate-90"
-            : "bg-emerald-600 hover:bg-emerald-500 text-white hover:scale-110 active:scale-[0.93] animate-bounce"
+            : "bg-emerald-600 hover:bg-emerald-500 text-white hover:scale-105 active:scale-95 shadow-emerald-950/40"
         }`}
-        aria-label="Contact WhatsApp support"
-        title="Contact technical support"
+        aria-label="Contact WhatsApp commercial desk"
+        title="Contact WhatsApp commercial desk"
       >
         {isOpen ? <X className="h-6 w-6" /> : <WhatsAppIcon className="h-7 w-7" />}
       </button>

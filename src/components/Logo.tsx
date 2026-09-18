@@ -7,89 +7,96 @@ interface LogoProps {
 }
 
 export const Logo: React.FC<LogoProps> = ({
-  className = "h-12",
+  className = "h-11",
   iconOnly = false,
-  colorLight = false,
+  colorLight = true,
 }) => {
-  const brandBlue = "#003049";
-  const brandGrey = "#334155";
-  const accentOrange = "#f77f00";
-  const lightColor = "#ffffff";
-
   return (
     <div className={`flex items-center gap-3 select-none ${className}`}>
-      {/* Icon Badge */}
+      {/* High-Contrast Technical Vector Logo Mark */}
       <svg
         id="grow-dons-logo-badge"
-        viewBox="0 0 512 280"
-        className="h-full w-auto flex-shrink-0"
+        viewBox="0 0 100 100"
+        className="h-full w-auto flex-shrink-0 filter drop-shadow-md"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Left 'G' - Blue */}
+        {/* Outer Hexagonal Industrial Shield */}
+        <rect
+          x="4"
+          y="4"
+          width="92"
+          height="92"
+          rx="18"
+          fill={colorLight ? "#091C2E" : "#071A2B"}
+          stroke={colorLight ? "#0B6670" : "#0B6670"}
+          strokeWidth="3"
+        />
+
+        {/* Subtle Diagonal Technical Accent Line */}
+        <line
+          x1="8"
+          y1="24"
+          x2="92"
+          y2="24"
+          stroke="#0B6670"
+          strokeWidth="1"
+          strokeDasharray="2 3"
+          opacity="0.4"
+        />
+
+        {/* Left Letter 'G' - Petroleum Teal with Bright Cyan Highlight */}
         <path
-          d="M210 50 H120 C70 50, 40 85, 40 140 C40 195, 70 230, 120 230 H210 V135 H155 V175 H175 V185 H125 C100 185, 88 170, 88 140 C88 110, 100 95, 125 95 H210 V50Z"
-          fill="#005B94"
-          stroke="#004d7c"
+          d="M44 26 H24 C17 26 12 31 12 38 V62 C12 69 17 74 24 74 H44 V52 H32 V60 H26 C23 60 21 58 21 54 V46 C21 42 23 40 26 40 H44 V26 Z"
+          fill="#0B6670"
+        />
+        <path
+          d="M44 26 H24 C17 26 12 31 12 38 V62 C12 69 17 74 24 74 H44 V52 H32 V60 H26 C23 60 21 58 21 54 V46 C21 42 23 40 26 40 H44 V26 Z"
+          stroke="#14b8a6"
           strokeWidth="1.5"
         />
 
-        {/* Right 'D' - Grey */}
+        {/* Right Letter 'D' - Crisp Bright White with High Visibility */}
         <path
-          d="M302 50 H392 C442 50, 472 85, 472 140 C472 195, 442 230, 392 230 H302 V50Z M348 95 V185 H387 C412 185, 424 170, 424 140 C424 110, 412 95, 387 95 H348Z"
-          fill="#334155"
-          stroke="#1e293b"
-          strokeWidth="1.5"
+          d="M52 26 H70 C79 26 86 33 86 42 V58 C86 67 79 74 70 74 H52 V26 Z M60 38 V62 H68 C73 62 76 59 76 54 V46 C76 41 73 38 68 38 H60 Z"
+          fill="#FFFFFF"
         />
 
-        {/* Pipe Assembly in the Center Gap */}
-        {/* Left Pipe Flange */}
-        <rect x="180" y="115" width="8" height="50" rx="2" fill="#0f172a" />
-        <rect x="188" y="125" width="22" height="30" fill="#475569" stroke="#0f172a" strokeWidth="2" />
-        
-        {/* Right Pipe Flange */}
-        <rect x="324" y="115" width="8" height="50" rx="2" fill="#0f172a" />
-        <rect x="302" y="125" width="22" height="30" fill="#475569" stroke="#0f172a" strokeWidth="2" />
+        {/* Central Safety Orange Flow / Industrial Droplet Accent */}
+        <circle cx="48" cy="50" r="4.5" fill="#F28C28" />
+        <line x1="43" y1="50" x2="53" y2="50" stroke="#F28C28" strokeWidth="2.5" strokeLinecap="round" />
+        <line x1="48" y1="45" x2="48" y2="55" stroke="#F28C28" strokeWidth="2.5" strokeLinecap="round" />
 
-        {/* Center Main Valve Body */}
-        <rect x="232" y="120" width="48" height="40" rx="4" fill="#1e293b" stroke="#0f172a" strokeWidth="3" />
-        {/* Flanges connecting center body to left/right */}
-        <rect x="210" y="130" width="22" height="20" fill="#475569" stroke="#0f172a" strokeWidth="2" />
-        <rect x="280" y="130" width="22" height="20" fill="#475569" stroke="#0f172a" strokeWidth="2" />
-        
-        {/* Valve Bonnet & Stem */}
-        <rect x="248" y="98" width="16" height="22" fill="#1e293b" stroke="#0f172a" strokeWidth="2" />
-        <rect x="252" y="80" width="8" height="18" fill="#64748b" />
-
-        {/* Top Handwheel / Valve Handle */}
-        <ellipse cx="256" cy="80" rx="24" ry="10" fill="#f77f00" stroke="#0f172a" strokeWidth="2.5" />
-        {/* Inner parts of the wheel */}
-        <circle cx="256" cy="80" r="4" fill="#0f172a" />
-        <line x1="232" y1="80" x2="280" y2="80" stroke="#0f172a" strokeWidth="2" />
-        <line x1="256" y1="70" x2="256" y2="90" stroke="#0f172a" strokeWidth="2" />
+        {/* Bottom Petroleum Indicator Dot */}
+        <circle cx="50" cy="85" r="2.5" fill="#14b8a6" />
       </svg>
 
-      {/* Typography Label */}
+      {/* Typography Brand Label */}
       {!iconOnly && (
-        <div className="flex flex-col select-none">
-          <span
-            className={`font-display text-lg font-bold tracking-wider leading-none ${
-              colorLight ? "text-white" : "text-[#005B94]"
-            }`}
-          >
-            GROW DONS
-          </span>
-          <div className="flex items-center gap-1 mt-0.5">
-            <div className={`h-[1px] flex-grow ${colorLight ? "bg-[#fcbf49]" : "bg-[#f77f00]"}`} />
+        <div className="flex flex-col select-none justify-center">
+          <div className="flex items-baseline gap-1.5 leading-none">
             <span
-              className={`font-sans text-[10px] font-semibold tracking-[0.25em] leading-none uppercase ${
-                colorLight ? "text-[#fcbf49]" : "text-slate-600"
+              className={`font-display text-lg sm:text-xl font-extrabold tracking-tight ${
+                colorLight ? "text-white" : "text-[#071A2B]"
               }`}
             >
-              SERVICES
+              GROW DONS
             </span>
-            <div className={`h-[1px] flex-grow ${colorLight ? "bg-[#fcbf49]" : "bg-[#f77f00]"}`} />
+            <span
+              className={`font-display text-xs sm:text-sm font-semibold tracking-wider ${
+                colorLight ? "text-teal-300" : "text-[#0B6670]"
+              }`}
+            >
+              SERVICES LTD
+            </span>
           </div>
+          <span
+            className={`font-mono text-[9px] sm:text-[10px] tracking-wider uppercase leading-tight mt-1 font-medium ${
+              colorLight ? "text-[#F28C28]" : "text-[#0B6670]"
+            }`}
+          >
+            Oilfield Chemicals &amp; Technical Supply
+          </span>
         </div>
       )}
     </div>
