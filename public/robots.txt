@@ -1,0 +1,12 @@
+# robots.txt for Grow Dons Services Ltd (RC. 1902045)
+# https://www.growdonsservices.com
+
+User-agent: *
+Allow: /
+Disallow: /api/private/
+
+# Host
+Host: https://www.growdonsservices.com
+
+# Sitemaps
+Sitemap: https://www.growdonsservices.com/sitemap.xml

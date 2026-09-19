@@ -100,7 +100,8 @@ ${formData.additionalRequirements || "None provided"}`;
     const text = encodeURIComponent(
       `Hello Grow Dons Commercial Desk, please find our official RFQ details below:\n\n${getRfqSummaryText()}`
     );
-    window.open(`https://wa.me/2348034638006?text=${text}`, "_blank");
+    const waNumber = CONTACT_INFO.whatsappRaw || "2348128751360";
+    window.open(`https://wa.me/${waNumber}?text=${text}`, "_blank");
   };
 
   const handleEmailDispatch = () => {
@@ -165,15 +166,25 @@ ${formData.additionalRequirements || "None provided"}`;
 
                 <div className="pt-3 border-t border-slate-800">
                   <span className="text-slate-400 font-mono text-[10px] uppercase tracking-wider block mb-1">
-                    Commercial Desk Phone
+                    Commercial Desk Phone &amp; WhatsApp
                   </span>
-                  <a
-                    href="tel:+2348034638006"
-                    className="flex items-center gap-2.5 text-slate-200 hover:text-[#F28C28] font-semibold transition-colors"
-                  >
-                    <Phone className="h-4 w-4 text-[#0B6670]" />
-                    <span>{CONTACT_INFO.phone}</span>
-                  </a>
+                  <div className="flex flex-col gap-1.5">
+                    <a
+                      href={`tel:${CONTACT_INFO.phoneRaw}`}
+                      className="flex items-center gap-2.5 text-slate-200 hover:text-[#F28C28] font-semibold transition-colors"
+                    >
+                      <Phone className="h-4 w-4 text-[#0B6670]" />
+                      <span>{CONTACT_INFO.phone}</span>
+                    </a>
+                    {CONTACT_INFO.phoneSecondary && (
+                      <a
+                        href={`tel:${CONTACT_INFO.phoneSecondaryRaw}`}
+                        className="flex items-center gap-2.5 text-slate-400 hover:text-slate-200 text-xs transition-colors pl-6"
+                      >
+                        <span>Alt: {CONTACT_INFO.phoneSecondary}</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 <div className="pt-3 border-t border-slate-800">
@@ -181,7 +192,7 @@ ${formData.additionalRequirements || "None provided"}`;
                     Official Quotation Email
                   </span>
                   <a
-                    href="mailto:growdonsservicesltd@gmail.com"
+                    href={`mailto:${CONTACT_INFO.email}`}
                     className="flex items-center gap-2.5 text-slate-200 hover:text-[#F28C28] font-semibold transition-colors break-all"
                   >
                     <Mail className="h-4 w-4 text-[#F28C28]" />
@@ -191,16 +202,16 @@ ${formData.additionalRequirements || "None provided"}`;
 
                 <div className="pt-3 border-t border-slate-800">
                   <span className="text-slate-400 font-mono text-[10px] uppercase tracking-wider block mb-1">
-                    Instant Messaging Channel
+                    Instant WhatsApp Desk
                   </span>
                   <a
-                    href="https://wa.me/2348034638006?text=Hello%20Grow%20Dons%20Commercial%20Desk%2C%20I%20would%20like%20to%20request%20a%20quotation."
+                    href={`https://wa.me/${CONTACT_INFO.whatsappRaw}?text=Hello%20Grow%20Dons%20Commercial%20Desk%2C%20I%20would%20like%20to%20request%20a%20quotation.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-bold transition-colors"
                   >
                     <MessageSquare className="h-4 w-4" />
-                    <span>Connect with WhatsApp Commercial Desk</span>
+                    <span>WhatsApp Desk ({CONTACT_INFO.whatsapp})</span>
                   </a>
                 </div>
               </div>

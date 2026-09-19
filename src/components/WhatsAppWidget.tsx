@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { MessageSquare, X, Send } from "lucide-react";
+import { CONTACT_INFO } from "../data";
 
 // WhatsApp Brand SVG Icon
 const WhatsAppIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
@@ -23,7 +24,7 @@ export const WhatsAppWidget: React.FC = () => {
     return () => clearTimeout(timer);
   }, [isOpen]);
 
-  const primaryPhone = "2348034638006"; // Grow Dons Services Official Hotline
+  const primaryPhone = CONTACT_INFO.whatsappRaw || "2348128751360"; // Grow Dons Official WhatsApp Desk
   const defaultMsg = "Hello Grow Dons Services, I would like to inquire about your oilfield chemicals and technical supply.";
 
   const handleMessageClick = (customText?: string) => {
@@ -97,7 +98,7 @@ export const WhatsAppWidget: React.FC = () => {
                   <h4 className="text-sm font-bold tracking-wide">Grow Dons Commercial Desk</h4>
                   <p className="text-[10px] text-emerald-100 flex items-center gap-1 mt-0.5 font-mono">
                     <span className="h-1.5 w-1.5 rounded-full bg-white inline-block animate-ping" />
-                    <span>Port Harcourt Operational Hub</span>
+                    <span>WhatsApp: {CONTACT_INFO.whatsapp}</span>
                   </p>
                 </div>
               </div>

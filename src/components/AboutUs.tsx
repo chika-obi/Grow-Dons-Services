@@ -26,6 +26,7 @@ import {
   ChevronDown
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { CarouselGallery } from "./CarouselGallery";
 
 // Icon mapping dictionary
 const iconMap: Record<string, React.ReactNode> = {
@@ -439,6 +440,19 @@ export const AboutUs: React.FC = () => {
             </AnimatePresence>
           </div>
 
+        </div>
+
+        {/* Operational Infrastructure Field Gallery */}
+        <div className="mt-14 max-w-5xl mx-auto">
+          <div className="mb-6 text-center">
+            <h3 className="font-display font-black text-xl text-slate-900 tracking-tight">
+              Operational Facilities &amp; Field Infrastructure
+            </h3>
+            <p className="text-xs text-slate-500 font-sans mt-1">
+              Explore our laboratory testing facilities, chemical warehousing, and offshore staging logistics.
+            </p>
+          </div>
+          <CarouselGallery id="about-us-carousel-gallery" />
         </div>
 
       </div>

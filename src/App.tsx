@@ -104,7 +104,12 @@ export default function App() {
                 onRequestQuote={() => handleOpenRfq("Material Logistics Coordination")}
               />
             )}
-            {currentView === "about" && <AboutView />}
+            {currentView === "about" && (
+              <AboutView
+                onNavigate={handleNavigate}
+                onRequestQuote={handleOpenRfq}
+              />
+            )}
             {currentView === "leadership" && <LeadershipView />}
             {currentView === "quote" && <QuoteView />}
           </motion.div>

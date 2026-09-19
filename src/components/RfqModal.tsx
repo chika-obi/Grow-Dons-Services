@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { RfqFormData } from "../types";
+import { CONTACT_INFO } from "../data";
 import {
   FileSpreadsheet,
   X,
@@ -116,7 +117,8 @@ ${formData.additionalRequirements || "None provided"}`;
     const text = encodeURIComponent(
       `Hello Grow Dons Commercial Desk, please find our official RFQ details below:\n\n${getRfqSummaryText()}`
     );
-    window.open(`https://wa.me/2348034638006?text=${text}`, "_blank");
+    const waNumber = CONTACT_INFO.whatsappRaw || "2348128751360";
+    window.open(`https://wa.me/${waNumber}?text=${text}`, "_blank");
   };
 
   const handleEmailDispatch = () => {

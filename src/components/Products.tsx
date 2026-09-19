@@ -11,7 +11,7 @@ export const Products: React.FC = () => {
   // Extract unique categories for tab filtering
   const categories = useMemo(() => {
     const list = new Set(PRODUCTS.map((p) => p.category));
-    return ["All", "Major Specialty Chemicals", ...Array.from(list).filter(c => c !== "Major Specialty Chemicals")];
+    return ["All", ...Array.from(list)];
   }, []);
 
   // Filter products based on active tab and search criteria

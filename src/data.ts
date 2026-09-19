@@ -16,6 +16,14 @@ import teamImg from "./assets/images/engineering_team_1781482271888.jpg";
 import warehouseImg from "./assets/images/warehouse_chemicals_opt.jpg";
 import qaLabImg from "./assets/images/qa_testing_lab_opt.jpg";
 
+// Dedicated African Working Personnel & Operations Images
+import africanLabChemistImg from "./assets/images/african_lab_chemist_1789816739805.jpg";
+import africanWarehouseImg from "./assets/images/african_warehouse_crew_1789816754031.jpg";
+import africanQuaysideImg from "./assets/images/african_quayside_crew_1789816766679.jpg";
+import africanFieldChemistsImg from "./assets/images/african_field_chemists_1789816779782.jpg";
+import africanProcureTeamImg from "./assets/images/african_procure_team_1789816791977.jpg";
+import africanDrillingCrewImg from "./assets/images/african_drilling_crew_1789816803689.jpg";
+
 import directorImg from "./assets/images/director_donatus.jpg";
 import gmImg from "./assets/images/gm_ekweme.jpg";
 import opsImg from "./assets/images/ops_manager_jerry.jpg";
@@ -30,8 +38,12 @@ export const COMPANY_SUPPORTING = "Specialized chemical products and technical s
 
 export const CONTACT_INFO = {
   address: "Mrs Ogechi Erhiakeme Plaza, Opposite A.A Rano Filling Station, Along Obiri Ikwerre New Airport Road, Port Harcourt, Rivers State, Nigeria",
-  phone: "+234 803 463 8006",
-  phoneRaw: "2348034638006",
+  phone: "+234 812 875 1360",
+  phoneRaw: "2348128751360",
+  phoneSecondary: "+234 803 463 8006",
+  phoneSecondaryRaw: "2348034638006",
+  whatsapp: "+234 812 875 1360",
+  whatsappRaw: "2348128751360",
   email: "growdonsservicesltd@gmail.com",
   website: "www.growdonsservices.com",
   websiteUrl: "https://www.growdonsservices.com",
@@ -40,11 +52,12 @@ export const CONTACT_INFO = {
 
 export const IMAGES = {
   hero: heroImg,
-  chemicals: chemicalsImg,
-  logistics: offshoreImg,
-  team: teamImg,
-  warehouse: warehouseImg,
-  qaLab: qaLabImg,
+  chemicals: africanFieldChemistsImg,
+  logistics: africanQuaysideImg,
+  offshore: africanQuaysideImg,
+  team: africanProcureTeamImg,
+  warehouse: africanWarehouseImg,
+  qaLab: africanLabChemistImg,
 };
 
 // TECHNICAL SOLUTIONS: Application-oriented framework
@@ -640,61 +653,61 @@ export const INDUSTRIES_SERVED = [
   }
 ];
 
-// CAROUSEL GALLERY SLIDES
+// CAROUSEL GALLERY SLIDES - 100% African Working Operations Personnel
 export const CAROUSEL_GALLERY_SLIDES: GallerySlide[] = [
-  {
-    id: "chemical-warehouse",
-    title: "High-Bay Chemical Storage & Palletized Staging",
-    category: "Warehouse Logistics",
-    description: "Climate-monitored high-bay chemical facility housing API-grade bentonite, barite, biocides, drums, and IBC totes on containment-ready pallets.",
-    location: "Port Harcourt Central Warehouse",
-    badge: "API & ISO Compliant",
-    imageUrl: IMAGES.warehouse
-  },
   {
     id: "qa-testing-lab",
     title: "Drilling Fluid Analysis & CoA Quality Testing",
     category: "Technical QA / QC",
-    description: "Comprehensive laboratory testing covering fluid density, marsh funnel viscosity, plastic viscosity, yield point, and purity assay prior to dispatch.",
-    location: "Technical QA Laboratory",
+    description: "African chemical quality control chemists performing certified fluid density, marsh funnel viscosity, rheology, and purity assay prior to batch dispatch.",
+    location: "Technical QA Laboratory, Port Harcourt",
     badge: "Certified CoA Protocol",
-    imageUrl: IMAGES.qaLab
+    imageUrl: africanLabChemistImg
+  },
+  {
+    id: "chemical-warehouse",
+    title: "High-Bay Chemical Storage & Palletized Staging",
+    category: "Warehouse Logistics",
+    description: "African warehouse logistics supervisors managing climate-monitored high-bay chemical facility housing API-grade bentonite, barite, biocides, and IBC totes on containment pallets.",
+    location: "Port Harcourt Central Warehouse",
+    badge: "API & ISO Compliant",
+    imageUrl: africanWarehouseImg
   },
   {
     id: "offshore-quayside",
     title: "Quayside Transfer & Offshore Supply Vessel Support",
     category: "Marine Logistics",
-    description: "Certified quayside chemical loading, slings, and marine crane transfers supporting offshore drilling rigs and production platforms.",
+    description: "African quayside dockworkers and marine logistics crew supervising certified chemical loading, offshore slings, and vessel crane transfers.",
     location: "Onne Free Zone & Warri Shorebases",
     badge: "Shorebase Logistics",
-    imageUrl: IMAGES.logistics
+    imageUrl: africanQuaysideImg
   },
   {
     id: "chemical-staging",
     title: "Chemical Batch Formulation & Rig Site Dispatch",
     category: "Field Operations",
-    description: "Precision drum staging, secondary containment, and rapid hazardous material logistics for time-critical well drilling campaigns.",
+    description: "African petroleum chemical engineers conducting precision drum staging, secondary containment checks, and rapid hazardous material rig dispatch.",
     location: "Rivers & Delta Operating Corridors",
     badge: "HSE Level-1 Safety",
-    imageUrl: IMAGES.chemicals
+    imageUrl: africanFieldChemistsImg
   },
   {
     id: "technical-team",
     title: "Technical Engineering & Procurement Specialists",
     category: "Corporate Excellence",
-    description: "Dedicated petroleum engineers, technical supply chain professionals, and operations managers coordinating compliant field delivery.",
-    location: "Commercial Operations Desk",
+    description: "African petroleum engineers and technical procurement specialists coordinating compliant field supply delivery and upstream chemical schedules.",
+    location: "Commercial Operations Desk, Port Harcourt",
     badge: "100% Indigenous Content",
-    imageUrl: IMAGES.team
+    imageUrl: africanProcureTeamImg
   },
   {
-    id: "industrial-infrastructure",
-    title: "Energy Infrastructure & Supply Chain Network",
-    category: "Strategic Infrastructure",
-    description: "End-to-end industrial supply chain network bridging international chemical synthesis plants with Nigerian oilfield operators.",
-    location: "Niger Delta Regional Reach",
-    badge: "Trusted Energy Partner",
-    imageUrl: IMAGES.hero
+    id: "rig-fluid-operations",
+    title: "Drilling Fluid Engineering & Active Mud Mixing",
+    category: "Drilling Operations",
+    description: "African drilling fluid specialists monitoring chemical mixing hoppers, circulation tanks, and real-time rheology on active drilling rig sites.",
+    location: "Niger Delta Drilling Locations",
+    badge: "Wellsite Engineering",
+    imageUrl: africanDrillingCrewImg
   }
 ];
 
@@ -737,7 +750,93 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: "How can clients request a formal quotation or submit an RFQ?",
-    answer: "Clients can submit specifications directly through our online Request for Quote (RFQ) portal on this website (www.growdonsservices.com), email requirements to growdonsservicesltd@gmail.com, or contact our commercial desk via WhatsApp or phone at +234 803 463 8006.",
+    answer: "Clients can submit specifications directly through our online Request for Quote (RFQ) portal on this website (www.growdonsservices.com), email requirements to growdonsservicesltd@gmail.com, or contact our commercial desk via WhatsApp or phone at +234 812 875 1360 (or +234 803 463 8006).",
     category: "Commercial & RFQ"
   }
 ];
+
+// Compatibility exports for legacy or standalone components
+export const PRODUCTS = CHEMICAL_PRODUCTS;
+
+export const FLUID_SYSTEMS = [
+  { name: "Water-Based Muds (WBM)", desc: "High-inhibition potassium chloride and polymer drilling systems for onshore and swamp environments." },
+  { name: "Non-Aqueous / OBM Systems", desc: "Stable synthetic and low-toxicity mineral oil-based invert emulsion systems." },
+  { name: "Completion Brines", desc: "Clear solids-free monovalent and divalent salt solutions customized to target density." },
+  { name: "Production Chemicals", desc: "Corrosion inhibitors, demulsifiers, biocides, and scale prevention formulations." },
+  { name: "Workover & Stimulation", desc: "Wellbore clean-up surfectants, mutual solvents, mutual acids, and mutual spacer formulations." },
+  { name: "Environmental Formulations", desc: "Readily biodegradable, low-toxicity eco-friendly offshore discharge chemistries." }
+];
+
+export const SERVICES = [
+  {
+    id: "chemicals",
+    title: "Specialty Oilfield Chemistry",
+    iconName: "FlaskConical",
+    shortDescription: "Formulated drilling, production, and completion chemistries.",
+    fullDescription: "Grow Dons delivers premium technical chemicals tailored to oil and gas exploration, drilling operations, production facilities, and offshore rigs across Nigeria.",
+    points: [
+      "Rig-ready formulation and batch certification",
+      "Full CoA and SDS documentation provided",
+      "Corrosion, scale, and emulsion treatment programs",
+      "Buffer stocks maintained in Port Harcourt"
+    ]
+  },
+  {
+    id: "offshore-support",
+    title: "Offshore Logistics & Technical Staging",
+    iconName: "Ship",
+    shortDescription: "Vessel-ready cargo consolidation and shorebase expediting.",
+    fullDescription: "Direct supply-chain linkage between chemical supply hubs and offshore drilling units, ensuring timely vessel loading and certified cargo handling.",
+    points: [
+      "Certified marine container packaging",
+      "Onne port and Port Harcourt shorebase dispatch",
+      "Rapid turnaround for hot-shot critical requirements",
+      "Secondary containment and environmental safety"
+    ]
+  },
+  {
+    id: "equipment-rental",
+    title: "Technical Supply & Equipment Coordination",
+    iconName: "Layers",
+    shortDescription: "High-grade valves, flanges, filtration and containment hardware.",
+    fullDescription: "Comprehensive industrial hardware procurement supporting chemical circulation, high-pressure manifold connections, and filtration units.",
+    points: [
+      "API 6A / 6D compliant valves and fittings",
+      "Heavy-duty chemical dosing skid packages",
+      "Filtration bags, cartridges, and testing supplies",
+      "Strategic original manufacturer sourcing"
+    ]
+  },
+  {
+    id: "brine-filtration",
+    title: "Brine Preparation & QA/QC Analysis",
+    iconName: "Filter",
+    shortDescription: "Certified density verification, titration and laboratory validation.",
+    fullDescription: "In-house quality assurance laboratory testing for clear brine density, viscosity, chemical purity, and corrosion resistance.",
+    points: [
+      "Certified hydrometer and pycnometer density checks",
+      "Fann 35 rheological testing compatibility",
+      "Third-party accredited verification support",
+      "Pre-dispatch sampling and retained reference samples"
+    ]
+  }
+];
+
+export const ATTRIBUTES = [
+  { name: "Technical Rigor", subtitle: "Formulations verified through stringent laboratory analysis and standard specs.", iconName: "Shield" },
+  { name: "Local Content Champion", subtitle: "100% Nigerian entity certified under NUPRC guidelines (RC 1902045).", iconName: "Award" },
+  { name: "Supply Chain Reliability", subtitle: "Strategic local buffer inventories reducing downtime for active rigs.", iconName: "Clock" },
+  { name: "HSE Commitment", subtitle: "Zero-harm culture with verified hazardous materials packaging and handling.", iconName: "HeartPlus" },
+  { name: "Rapid Response Desk", subtitle: "Direct technical consultation and emergency dispatch coordination.", iconName: "Zap" },
+  { name: "Cost Efficiency", subtitle: "Optimized direct-manufacturer sourcing lowering total operational costs.", iconName: "Tag" }
+];
+
+export const PARTNERS = [
+  { name: "Chevron", logoText: "CHEVRON", vibe: "Offshore Production" },
+  { name: "Shell", logoText: "SHELL / SPDC", vibe: "Swamp & Land Wells" },
+  { name: "TotalEnergies", logoText: "TOTAL", vibe: "Deepwater Ops" },
+  { name: "ExxonMobil", logoText: "EXXON", vibe: "Offshore Facilities" },
+  { name: "NLNG", logoText: "NLNG", vibe: "Gas & Condensate" },
+  { name: "Seplat Energy", logoText: "SEPLAT", vibe: "Onshore Production" }
+];
+

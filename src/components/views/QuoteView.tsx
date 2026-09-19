@@ -70,7 +70,8 @@ Sent via Grow Dons Services Ltd Quotation Portal (${COMPANY_RC})`;
     const ref = rfqRef || generateRef();
     const message = formatRfqMessage(ref);
     const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/2348034638006?text=${encoded}`, "_blank");
+    const waNumber = CONTACT_INFO.whatsappRaw || "2348128751360";
+    window.open(`https://wa.me/${waNumber}?text=${encoded}`, "_blank");
   };
 
   const handleSendEmail = () => {
@@ -338,8 +339,14 @@ Sent via Grow Dons Services Ltd Quotation Portal (${COMPANY_RC})`;
               <div className="mt-6 pt-4 border-t border-slate-800 space-y-2 text-xs font-mono text-slate-400">
                 <div className="flex items-center gap-2">
                   <Phone className="h-3.5 w-3.5 text-teal-400" />
-                  <span>Direct Hotline: {CONTACT_INFO.phone}</span>
+                  <span>Phone / WhatsApp: {CONTACT_INFO.phone}</span>
                 </div>
+                {CONTACT_INFO.phoneSecondary && (
+                  <div className="flex items-center gap-2">
+                    <Phone className="h-3.5 w-3.5 text-slate-500" />
+                    <span>Alt Line: {CONTACT_INFO.phoneSecondary}</span>
+                  </div>
+                )}
                 <div className="flex items-center gap-2">
                   <Mail className="h-3.5 w-3.5 text-teal-400" />
                   <span>Email: {CONTACT_INFO.email}</span>

@@ -100,20 +100,20 @@ export const Footer: React.FC<FooterProps> = ({ onDownloadClick }) => {
               <div className="flex items-start gap-3">
                 <Phone className="h-4 w-4 text-brand-orange flex-shrink-0 mt-0.5" />
                 <div className="flex flex-col">
-                  <a href="tel:+2348034638006" className="hover:text-white transition-colors">
-                    +234 803 463 8006
+                  <a href="tel:+2348128751360" className="hover:text-white transition-colors font-medium">
+                    +234 812 875 1360 (Phone &amp; WhatsApp)
                   </a>
-                  <a href="tel:+2348128751260" className="hover:text-white transition-colors mt-0.5">
-                    +234 812 875 1260
+                  <a href="tel:+2348034638006" className="hover:text-white transition-colors mt-0.5 text-slate-400">
+                    +234 803 463 8006 (Alt Hotline)
                   </a>
                   <a 
-                    href="https://wa.me/2348034638006?text=Hello%20Grow%20Dons%20Services%2C%20I%20would%20like%20to%20request%2520information%20about%20your%20services."
+                    href="https://wa.me/2348128751360?text=Hello%20Grow%20Dons%20Services%2C%20I%20would%20like%20to%20request%20information%20about%20your%20services."
                     target="_blank"
                     referrerPolicy="no-referrer"
                     className="text-emerald-400 hover:text-emerald-350 transition-colors mt-1.5 flex items-center gap-1.5 font-bold text-[11px]"
                   >
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                    <span>Instant WhatsApp Chat</span>
+                    <span>Instant WhatsApp Chat (+234 812 875 1360)</span>
                   </a>
                 </div>
               </div>

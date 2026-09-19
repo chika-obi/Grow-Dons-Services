@@ -121,7 +121,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadClick }) => {
                     </div>
                     <div className="pt-2 border-t border-slate-900/60 mt-1">
                       <a
-                        href="https://wa.me/2348034638006?text=Hello%20Grow%20Dons%20Services%2C%20I%20would%20like%2520to%20request%20information%20on%2520your%20services."
+                        href="https://wa.me/2348128751360?text=Hello%20Grow%20Dons%20Services%2C%20I%20would%20like%2520to%20request%20information%20on%2520your%20services."
                         target="_blank"
                         referrerPolicy="no-referrer"
                         className="w-full text-center bg-emerald-600 hover:bg-emerald-500 text-white font-sans text-[10px] font-bold uppercase tracking-wider py-1.5 rounded flex items-center justify-center gap-1.5 transition-colors"
@@ -137,9 +137,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadClick }) => {
             
             {/* Right side alignment with phone AND quick language switcher flag indicators */}
             <div className="flex items-center gap-4 font-sans font-medium text-[11px]">
-              <a href="tel:+2348034638006" className="hover:text-amber-500 transition-colors flex items-center gap-1">
+              <a href="tel:+2348128751360" className="hover:text-amber-500 transition-colors flex items-center gap-1">
                 <Phone className="h-3 w-3 text-brand-orange" />
-                <span>+234 803 463 8006</span>
+                <span>+234 812 875 1360</span>
               </a>
               <span className="text-slate-700">•</span>
               <div className="flex items-center gap-2">
@@ -234,7 +234,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadClick }) => {
                     </div>
                     <div className="pt-2 border-t border-slate-900/60 mt-1">
                       <a
-                        href="https://wa.me/2348034638006?text=Hello%20Grow%20Dons%20Services%2C%20I%20would%20like%2520to%20request%20information%20on%2520your%20services."
+                        href="https://wa.me/2348128751360?text=Hello%20Grow%20Dons%20Services%2C%20I%20would%20like%2520to%20request%20information%20on%2520your%20services."
                         target="_blank"
                         referrerPolicy="no-referrer"
                         className="w-full text-center bg-emerald-600 hover:bg-emerald-500 text-white font-sans text-[10px] font-bold uppercase tracking-wider py-1.5 rounded flex items-center justify-center gap-1.5 transition-colors"
@@ -356,11 +356,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadClick }) => {
                     {/* Support info */}
                     <div className="flex flex-col gap-3 pt-2">
                       <a
-                        href="tel:+2348034638006"
+                        href="tel:+2348128751360"
                         className="flex items-center gap-3 text-slate-300 hover:text-brand-orange text-sm transition-colors py-1"
                       >
                         <Phone className="h-4 w-4 text-brand-orange" />
-                        <span>+234 803 463 8006</span>
+                        <span>+234 812 875 1360</span>
                       </a>
                       <a
                         href="mailto:growdonsservicesltd@gmail.com"

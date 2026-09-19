@@ -279,13 +279,13 @@ export const FaqSection: React.FC<FaqSectionProps> = ({
             )}
 
             <a
-              href="https://wa.me/2348034638006?text=Hello%20Grow%20Dons%20Services%2C%20I%20have%20a%20technical%20question%20regarding%20oilfield%20chemical%20supply."
+              href={`https://wa.me/${CONTACT_INFO.whatsappRaw || "2348128751360"}?text=Hello%20Grow%20Dons%20Services%2C%20I%20have%20a%20technical%20question%20regarding%20oilfield%20chemical%20supply.`}
               target="_blank"
               rel="noopener noreferrer"
               className="px-3.5 py-2.5 rounded border border-emerald-500/60 bg-emerald-950/40 hover:bg-emerald-900/50 text-emerald-300 font-mono text-xs font-semibold flex items-center gap-1.5 transition-colors"
             >
               <MessageSquare className="h-4 w-4 text-emerald-400" />
-              <span>WhatsApp Us</span>
+              <span>WhatsApp Us ({CONTACT_INFO.whatsapp})</span>
             </a>
           </div>
         </div>

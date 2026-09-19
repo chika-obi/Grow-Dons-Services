@@ -34,7 +34,7 @@ const AVAILABLE_DOCUMENTS: DocumentItem[] = [
       "Headquarters: New Airport Road, Off OPM Headquarters,",
       "              Port Harcourt, Rivers State, Nigeria.",
       "Primary Contact Details:",
-      "  - Phone: +234 803 463 8006 | +234 812 875 1260",
+      "  - Phone / WhatsApp: +234 812 875 1360 | +234 803 463 8006",
       "  - Email: growdonsservicesltd@gmail.com",
       "",
       "----------------------------------",

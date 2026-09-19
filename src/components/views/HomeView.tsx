@@ -14,7 +14,6 @@ import {
 } from "../../data";
 import { SectionHeader } from "../common/SectionHeader";
 import { ChemicalCard } from "../common/ChemicalCard";
-import { CarouselGallery } from "../CarouselGallery";
 import { FaqSection } from "../FaqSection";
 import {
   FlaskConical,
@@ -495,18 +494,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
       </section>
 
       {/* ============================================================ */}
-      {/* 6. OPERATIONAL INFRASTRUCTURE & FIELD CAROUSEL GALLERY       */}
-      {/* ============================================================ */}
-      <CarouselGallery
-        id="operations-gallery"
-        onRequestQuote={() => {
-          onNavigate("quote");
-          onRequestQuote();
-        }}
-      />
-
-      {/* ============================================================ */}
-      {/* 7. CORPORATE LEADERSHIP GALLERY & CREDIBILITY                */}
+      {/* 6. CORPORATE LEADERSHIP GALLERY & CREDIBILITY                */}
       {/* ============================================================ */}
       <section className="py-16 bg-[#071A2B] border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

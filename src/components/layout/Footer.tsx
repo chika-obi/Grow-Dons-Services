@@ -91,13 +91,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestQuote }) =>
               </button>
 
               <a
-                href="https://wa.me/2348034638006?text=Hello%20Grow%20Dons%20Services%2C%20I%20would%20like%20to%20inquire%20about%20your%20chemical%20supply."
+                href={`https://wa.me/${CONTACT_INFO.whatsappRaw || "2348128751360"}?text=Hello%20Grow%20Dons%20Services%2C%20I%20would%20like%20to%20inquire%20about%20your%20chemical%20supply.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-3.5 py-2.5 rounded border border-emerald-600/60 bg-emerald-950/40 text-emerald-300 font-mono font-medium text-xs flex items-center gap-1.5 hover:bg-emerald-900/50 transition-colors"
               >
                 <MessageSquare className="h-4 w-4" />
-                <span>WhatsApp Desk</span>
+                <span>WhatsApp Desk ({CONTACT_INFO.whatsapp})</span>
               </a>
             </div>
           </div>
@@ -164,13 +164,21 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestQuote }) =>
               <div className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 text-[#0B6670] flex-shrink-0" />
                 <div>
-                  <p className="text-slate-400">Commercial &amp; RFQ Desk:</p>
+                  <p className="text-slate-400">Commercial Phone &amp; WhatsApp:</p>
                   <a
-                    href={`tel:${CONTACT_INFO.phone}`}
-                    className="font-mono text-white hover:text-[#F28C28] font-bold transition-colors"
+                    href={`tel:${CONTACT_INFO.phoneRaw}`}
+                    className="font-mono text-white hover:text-[#F28C28] font-bold transition-colors block"
                   >
                     {CONTACT_INFO.phone}
                   </a>
+                  {CONTACT_INFO.phoneSecondary && (
+                    <a
+                      href={`tel:${CONTACT_INFO.phoneSecondaryRaw}`}
+                      className="font-mono text-slate-400 hover:text-slate-200 text-xs transition-colors block mt-0.5"
+                    >
+                      Alt: {CONTACT_INFO.phoneSecondary}
+                    </a>
+                  )}
                 </div>
               </div>
 

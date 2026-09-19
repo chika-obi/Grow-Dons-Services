@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
+import { ViewMode } from "../../types";
 import {
   COMPANY_NAME,
   COMPANY_RC,
@@ -8,9 +9,18 @@ import {
   INDUSTRIES_SERVED,
 } from "../../data";
 import { SectionHeader } from "../common/SectionHeader";
+import { CarouselGallery } from "../CarouselGallery";
 import { ShieldCheck, Award, Target, Eye, CheckCircle2, FileText, MapPin, HeartHandshake, ShieldAlert } from "lucide-react";
 
-export const AboutView: React.FC = () => {
+interface AboutViewProps {
+  onNavigate?: (view: ViewMode) => void;
+  onRequestQuote?: (prefillProduct?: string) => void;
+}
+
+export const AboutView: React.FC<AboutViewProps> = ({
+  onNavigate,
+  onRequestQuote,
+}) => {
   return (
     <div className="w-full bg-[#071A2B] text-white pt-32 pb-24 min-h-screen relative overflow-hidden">
       {/* Background Industrial Grid Accent */}
@@ -144,6 +154,36 @@ export const AboutView: React.FC = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+
+        {/* Operational Facilities & Logistics Infrastructure Carousel Gallery */}
+        <div id="operations-gallery" className="mb-16 scroll-mt-28">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-8"
+          >
+            <div className="flex items-center gap-2 mb-2 text-xs font-mono text-teal-400 uppercase font-bold">
+              <span className="h-2 w-2 rounded-full bg-teal-400" />
+              <span>Operational Assets &amp; Facilities</span>
+            </div>
+            <h3 className="font-display text-2xl sm:text-3xl font-bold text-white mb-2">
+              Operational Facilities &amp; Technical Staging
+            </h3>
+            <p className="text-slate-400 text-xs sm:text-sm font-sans max-w-2xl">
+              Verified physical infrastructure: dedicated chemical warehousing, analytical QA/QC laboratory, heavy-duty logistics fleet, and offshore supply staging.
+            </p>
+          </motion.div>
+
+          <CarouselGallery
+            id="about-operations-gallery"
+            onRequestQuote={() => {
+              if (onRequestQuote) onRequestQuote();
+              if (onNavigate) onNavigate("quote");
+            }}
+          />
         </div>
 
         {/* HSE Commitment Banner with Motion */}
